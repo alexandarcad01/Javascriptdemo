@@ -200,3 +200,155 @@ v1="s";
 console.log(7==5 || 7<2 || 7>5);
 console.log(v1=="s");
 console.log(!(v1=="s"));
+
+//ternary or conditional operator
+//condtion ? statemnt1 :statement2;
+console.log(v1);
+var output=v1=="s"? "v1 has value" : "v1 doesnot have value";
+console.log(output);
+//condtional chains with Ternary
+/*
+m=34; //input
+//35 32grade c 60 grade b 80 grade a 90 grade Distintion
+var mark= (35<=m && m<60) ? "grade c" : (60<=m && m<80) ? "Grade B" : (80<=m && m<90) ? "Grade A" : (90<=m && m<=100) ? "Grade Distinction" : "Fail";
+console.log(mark); // output
+*/
+//function declaration
+
+function findGrade(){
+
+    m=34; //input
+//35 32grade c 60 grade b 80 grade a 90 grade Distintion
+var mark= (35<=m && m<60) ? "grade c" : (60<=m && m<80) ? "Grade B" : (80<=m && m<90) ? "Grade A" : (90<=m && m<=100) ? "Grade Distinction" : "Fail";
+console.log(mark); // output
+
+}
+
+findGrade();
+
+
+
+function findGrade1(m,k){
+
+     //input
+//35 32grade c 60 grade b 80 grade a 90 grade Distintion
+var mark= (35<=m && m<60) ? "grade c" : (60<=m && m<80) ? "Grade B" : (80<=m && m<90) ? "Grade A" : (90<=m && m<=100) ? "Grade Distinction" : "Fail";
+console.log(k,mark); // output
+
+
+}
+
+findGrade1(65,"Alex");
+
+
+
+var findgrade2=(m,k)=>{
+    var mark= (35<=m && m<60) ? "grade c" : (60<=m && m<80) ? "Grade B" : (80<=m && m<90) ? "Grade A" : (90<=m && m<=100) ? "Grade Distinction" : "Fail";
+console.log(k,mark); // output
+
+
+}
+
+console.log(findgrade2(36,"ram"));
+
+// using functions
+ 
+function checkgrade(){
+console.log("welcome");
+console.log("just trying");
+
+}
+
+
+var checkgrade1=(a,b)=>{
+   // console.log(a+b);
+return a+b;
+};
+
+checkgrade();
+// to get output in log using function
+console.log("added Value", checkgrade1(1,2))
+
+//to store output in variable to print in console
+var printmsg =checkgrade1(1,2);
+console.log(printmsg);
+
+// trying to short the code
+var checkgrade2=(a,b)=> a+b;
+
+console.log(checkgrade2(5,10));
+
+
+// trying to short the code
+var checkgrade2=()=> checkgrade();
+
+console.log(checkgrade2());
+
+// conditional statements
+// if condition
+function gradeChecking(m){
+if(35>m && m!=null)
+{
+console.log("no grade");
+console.log("Fail");
+}
+}
+
+gradeChecking(45);
+
+
+
+// if else condition
+function gradeChecking(m){
+    if(35>m && m!=null)
+    {
+    console.log("no grade");
+    console.log("Fail");
+    }
+    else{
+        console.log("Pass");
+        console.log("Other Grades");
+    
+    }
+    }
+
+    
+    gradeChecking(45);
+    
+    
+// nested if else condition
+function gradeChecking(m){
+    if(35>m && m!=null)
+    {
+    console.log("no grade");
+    console.log("Fail");
+    }
+    else{
+        if(35<m && m!=null && m<=60){
+
+            console.log("Pass");
+            console.log("Grade c");
+                }
+
+        else if(60<m && m!=null && m<=80){
+
+            console.log("Pass");
+            console.log("Grade b");
+                }
+
+        else if(80<m && m!=null && m<=100){
+
+            console.log("Pass");
+            console.log("Grade A");
+                }
+                else{
+
+                    gradeChecking(prompt("enter mark"));
+                }
+                
+    }
+    }
+
+    
+    gradeChecking(99);
+    
