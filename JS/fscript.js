@@ -34,7 +34,7 @@ console.log(c);
 
 a=6.5;
 console.log(a);
-b=8.5;
+d=8.5;
 console.log(b);
 
 
@@ -137,9 +137,6 @@ console.log(f, typeof f);
 f.name=25;
 console.log(f, typeof f);
 
-
-
-
 //OPERATORS in JAVASCRIPT
 
 //arithmatic operator
@@ -187,6 +184,7 @@ console.log(v1);
 
 console.log(v1==5);
 console.log(v1==="5", typeof v1);
+//not equal to
 console.log(v1!=1);
 console.log(v1!=="5", typeof v1);
 
@@ -195,29 +193,45 @@ console.log(v1>1);
 console.log(v1<1);
 console.log(v1>=5);
 console.log(v1<=10);
+
 //logical operator
-v1="s";
+//or
+v1="7";
+v2="s";
+console.log(v1==5||v1<2);
+console.log(v1==6||v1<2);
 console.log(7==5 || 7<2 || 7>5);
-console.log(v1=="s");
-console.log(!(v1=="s"));
+console.log(v2=="s");
+console.log(!(v2=="s"));
+
+//and
+console.log(v1==5&&v1<10);
+
+//Not
+console.log(!v1);
+console.log(v1==7&&v1<10);
 
 //ternary or conditional operator
+
 //condtion ? statemnt1 :statement2;
 console.log(v1);
-var output=v1=="s"? "v1 has value" : "v1 doesnot have value";
+console.log(v1?"v1 has value":"v1 ddoesn't have value");
+var output=v1=="f"? "v1 has value" : "v1 doesnot have value";
 console.log(output);
+
 //condtional chains with Ternary
-/*
-m=34; //input
+
+m=34; 
+//input
 //35 32grade c 60 grade b 80 grade a 90 grade Distintion
 var mark= (35<=m && m<60) ? "grade c" : (60<=m && m<80) ? "Grade B" : (80<=m && m<90) ? "Grade A" : (90<=m && m<=100) ? "Grade Distinction" : "Fail";
-console.log(mark); // output
-*/
+console.log(mark);
+
 //function declaration
 
 function findGrade(){
-
-    m=34; //input
+m=34; 
+//input
 //35 32grade c 60 grade b 80 grade a 90 grade Distintion
 var mark= (35<=m && m<60) ? "grade c" : (60<=m && m<80) ? "Grade B" : (80<=m && m<90) ? "Grade A" : (90<=m && m<=100) ? "Grade Distinction" : "Fail";
 console.log(mark); // output
@@ -307,15 +321,12 @@ function gradeChecking(m){
     }
     else{
         console.log("Pass");
-        console.log("Other Grades");
-    
+        console.log("Other Grades");    
     }
     }
 
-    
     gradeChecking(45);
-    
-    
+
 // nested if else condition
 function gradeChecking(m){
     if(35>m && m!=null)
@@ -323,32 +334,161 @@ function gradeChecking(m){
     console.log("no grade");
     console.log("Fail");
     }
-    else{
-        if(35<m && m!=null && m<=60){
-
+    else
+    {
+        if(35<m && m!=null && m<=60)
+        {
             console.log("Pass");
             console.log("Grade c");
                 }
-
-        else if(60<m && m!=null && m<=80){
-
+        else
+         if(60<m && m!=null && m<=80)
+              {
             console.log("Pass");
             console.log("Grade b");
                 }
 
-        else if(80<m && m!=null && m<=100){
-
+        else
+         if(80<m && m!=null && m<=100)
+        {
             console.log("Pass");
             console.log("Grade A");
                 }
-                else{
-
+                else
+                {
                     gradeChecking(prompt("enter mark"));
                 }
                 
     }
     }
 
-    
-    gradeChecking(99);
-    
+gradeChecking(99);
+
+//switch conditional statement
+
+function checkingwithswitch(a)
+{
+
+switch(a){
+    case 1:
+    console.log('executed case s',typeof a);
+    break;
+    case 2:
+    console.log("case 2 executed",a);
+    break;
+    case 3:
+    console.log("case 3 executed");
+    break;
+    default:
+        //console.log("not in the case list");
+        //checkingwithswitch(prompt("enter codition"));
+        alert("cases not in list");
+    }
+}
+checkingwithswitch(prompt("enter the condition value"));
+
+checkingwithswitch(1);
+
+function checkingWithSwitch(a1,b1,a)
+{
+
+   // var a1, b1;
+
+    switch(a){
+        case 'add':
+            // statement
+            console.log('executed case s', a1+b1);
+            break;
+        case 'subtract':
+            // statement
+            console.log("case 2 executed",a1-b1);
+            
+            break;
+        case 'multiply':
+            // statement
+            console.log("case 3 executed", a1*b1);
+            break;
+        
+        default:
+            // statement
+            
+            alert("operator not in the list");
+    }
+
+}
+console.clear();
+checkingWithSwitch(2,5,"add");
+
+
+
+
+function checkingWithSwitch(a)
+{
+
+   var a1, b1;
+   a1=prompt("enter a1");
+   b1=prompt("enter b1");
+   a1=Number(a1);
+   b1=Number(b1);
+   
+
+    switch(a){
+        case 'add':
+            // statement
+            console.log('added value of ',a1, 'and ',b1,'is .. ', a1+b1);
+            break;
+        case 'subtract':
+            // statement
+            console.log('subtracted value of ',a1, 'and ',b1,'is .. ', a1-b1);
+            
+            break;
+        case 'multiply':
+            // statement
+            console.log("case 3 executed", a1*b1);
+            break;
+        
+        default:
+            // statement
+            
+            alert("operator not in the list");
+    }
+
+}
+console.clear();
+checkingWithSwitch(prompt("Enter Operator"));
+
+
+// increment operator
+
+var a=2;
+a++;
+console.log(a);
+
+var a=2;
+var x=a++;
+console.log('increment with assignment',x);
+console.log('increment with assignment',a);
+
+console.log(x+a);
+
+var a=2;
+++a;
+console.log('prefix increment',a);
+
+var a=2;
+var x=++a;
+console.log('prefix increment with assignment',x);
+console.log('prefix increment with assignment',a);
+
+console.log(x+a);
+
+//decrement 
+var a=2;
+a--;
+console.log(a);
+
+
+var a=2;
+var x=--a;
+console.log('increment with assignment',x);
+console.log('increment with assignment',a);
