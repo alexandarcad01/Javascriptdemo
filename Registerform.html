@@ -1,73 +1,74 @@
-/**<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>FORM</title>
 </head>
         <body>
-            <header><h1>Registration Form :</h1></header>
-            <main><article> 
+            <header><h1> REGISTRATION FORM </h1></header>
+        FIRST_NAME:<br>
+        <input type="text" name="firstname" size="15" value="" id="tbfname"/> <br> <br>
+        LAST_NAME:<br>
+        <input type="text" name="lastname" size="15" value="" id="tblname"/> <br> <br>
+        USER_NAME: <br>
+        <input type="text" name="username" size="15" value="" id="tbuname"/> <br> <br>
+        PASSWORD:<br>
+        <input type="text" name="password" size="15" value="" id="tbpassword"/> <br> <br>
+        CONFORM_PASSWORD:<br>
+        <input type="text" name="confirmpassword" size="15" value="" id="tbconfirmpassword"/> <br> <br>
+        EMAIL: <br>
+        <input type="text" name="email" size="15" value="" id="tbemail"/> <br> <br>
+        PHONE NUMBER:<br>
+        <input type="text" name="phoneno" size="15" value="" id="tbphoneno"/> <br> <br>
+
+        ACCOUNT_TYPE:<br>
+        <select>
+            <option>--ACCOUNT_TYPE--</option>
+            <option>PREMIUM</option>
+            <option>FREE</option>
+        </select><br><br>
+        <input type="text" name="accounttype" size="15" value="" id="tbaccounttype"/>
+        
+        <input type="submit" value="Register" onclick="RegisterForm()"><br><br>
                 
-            </article></main>
-            <center><fieldset><legend>USER_REG :</legend>
-                <form>
-                    <label>USER_ID</label><br>
-                    <input type="text" placeholder="USER_ID"><br>
-                    
-                    <label>FIRST_NAME</label><br>
-                    <input type="text" placeholder="FIRST_NAME"><br>
-                    
-                    <label>LAST_NAME</label><br>
-                    <input type="text" placeholder="LAST_NAME"><br>
-                    
-                    <label>USER_NAME</label><br>
-                    <input type="text" placeholder="USER_NAME"><br>
-                
-                     <label>PASSWORD</label><br>
-                     <input type="text" placeholder="PASSWORD"><br>
-                
-                     <label>CONFORM_PASSWORD</label><br>
-                     <input type="text" placeholder="CONFORM_PASSWORD"><br>
-                
-                     <label>EMAIL</label><br>
-                     <input type="email"><br>
-                
-                     <label>PHONE NUMBER</label><br>
-                     <input type="phone" value="+91"><br>
-                
-                    <label>ACCOUNT_TYPE</label><br>
-                     <select>
-                        <option>--ACCOUNT_TYPE--</option>
-                        <option>PREMIUM</option>
-                        <option>FREE</option>
-                        </select><br>
-                        
-                    <input type="checkbox">
-                    <label>I accept the terms and condition</label><br><br>
-                        
-                    <input type="submit" value="Register"><br><br><input type="Reset" value="Clear">
-                    
-            </fieldset></center>
-        </form>  
+        <table border="1px">
+            <tr>
+                <td> FIRST_NAME:</td>
+                <td id="fname"></td>
+            </tr>
+            <tr>
+                <td>LAST_NAME:</td>
+                <td id="lname"></td>
+            </tr>
+            <tr>
+                <td>USER_NAME:</td>
+                <td id="uname"></td>
+            </tr>
+            <tr>
+                <td>PASSWORD:</td>
+                <td id="password"></td>
+            </tr>
+            <tr>
+                <td>CONFORM_PASSWORD:</td>
+                <td id="confirmpassword"></td>
+            </tr>
+            <tr>
+                <td>EMAIL:</td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td>PHONE NUMBER:</td>
+                <td id="phoneno"></td>
+            </tr>
+            <tr>
+                <td>ACCOUNT_TYPE:</td>
+                <td id="accounttype"></td>
+            </tr>
+        </table> 
+        <script src="JS/Registerform.js">
+        </script>
     </body>
-    </html>**/
-    <!DOCTYPE html>
-<html>
-<body>
+    </html>
 
-<h2>JavaScript For Loop</h2>
 
-<p id="demo"></p>
 
-<script>
-const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
-
-let text = "";
-for (let i = 0; i < cars.length; i++) {
-  text += cars[i] + "<br>";
-}
-
-document.getElementById("demo").innerHTML = text;
-</script>
-
-</body>
-</html>
+    
